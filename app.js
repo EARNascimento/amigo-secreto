@@ -23,6 +23,15 @@ function adicionarAmigo(){
     }
 };
 
+function sortearAmigo(){
+    if(amigos.length <= 1){
+        alert("Quantidade de nomes insuficiente!");
+    } else {
+        let numeroAleatorio = parseInt(Math.random() * amigos.length);
+        let resultado = document.getElementById('resultado');
+        resultado.innerHTML = amigos[numeroAleatorio];
+    }
+}
 
 function exibirTextoNaTela(tag, texto){
     let campo = document.querySelector(tag);
